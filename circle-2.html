@@ -28,8 +28,12 @@
             let x = e.clientX;
             let y = e.clientY;
 
-            circleElement.style.top = y + 'px';
-            circleElement.style.left = x + 'px';
+            if (timer) clearTimeout(timer);
+            var timer = setTimeout(() => {
+                circleElement.style.top = y + 'px';
+                circleElement.style.left = x + 'px';
+            }, 100);
+
         }
 
         document.addEventListener('mousemove', moveCircle);
