@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container-01 {
+            display: flex;
+            flex-flow: column;
+            gap: 20px;
+            margin:20px;
+        }
+
+        .container-02 {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px;  
+        }
+
+        .item {
+            width:100%;
+            min-height: 100px;
+            background-color:#ccc;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid red;
+            /* transition: all .1s ease-in-out;  */
+            
+        }
+
+        /* .item:hover {
+            transform: scale(1.05);
+            border-radius: 20px;
+        } */
+
+        .item-3,
+        .item-4 {
+                display:none;
+            }
+
+        /* For med screens */
+        @media screen and (min-width: 600px) {
+            body {
+                background-color: #F09A9D;
+            }
+            
+            .container-02 {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+
+            .item-1 {
+                height:300px;
+                width: 200px;
+                background-color: darksalmon;
+            }
+
+            .item-2 {
+                flex: 1;
+                width: unset;
+                background-color:azure;
+            }
+
+            
+        }
+        
+        /* For wider screens */
+        @media screen and (min-width: 800px) {
+
+            .item-3 {
+                flex: 1;
+                width: unset;
+                background-color:mistyrose;
+                display:flex;
+            }
+        }
+
+        /* For wider screens */
+        @media screen and (min-width: 1200px) {
+
+            .item-4 {
+                flex: 1;
+                width: unset;
+                background-color:bisque;
+                display:flex;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container-01">
+        <div class="item"></div>
+        <div class="container-02">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+        </div>
+        <div class="item"></div>
+    </div>
+
+</body>
+</html>
